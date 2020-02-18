@@ -6,26 +6,193 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
-Author 1
-Author 2
+Mallory Hull //changed the author to myself
  
 Further Information:
-http://diystream.cns.utexas.edu/
-
+http://cns.utexas.edu/fri
+ 
 Research Educator:
 Timothy Riedel
 triedel@utexas.edu
  
-Brief Description of Goal of Code:
-blah, blah, blah,
+Brief Description of Goal of Code: To diagnose whether or not the symptoms are for malaria or dengue fever // updated reasoning 
  
-Known Issues:
-blah, blah, blah, blah
--->
+Known Issues: trouble getting the results page to code correctly // updated issues
 
+https://www.w3schools.com/w3css/default.asp
+https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
+-->
+	
    <head> 
-      
-	   PUT YOUR OLD CODE IN HERE
-	   
-   </body>
+      <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+
+
+<script>
+        var malaria_count = 0; //updated to say malaria
+        var dengue_count = 0; //updated to say gange
+
+//this was updated to code for malaria not allergies
+        function malariaAdd(){ 
+            malaria_count = malaria_count + 1;
+		//alert(malaria_count);
+
+} //this was updated to code for gange count not cold
+	function dengueAdd(){ // this function adds 1 to gange value
+             dengue_count = dengue_count + 1;
+		//alert(dengue_count);
+		
+ } //was updated to code for percentage dengue and malaria, not cold and allergies
+function resultPercentage() {
+	var malariaPercentage = malaria_count /4 *100; // deleted "" added ; added multiple by 100
+	alert(malariaPercentage); // added for pop up box
+	var denguePercentage = dengue_count /4 *100; // delted "" added ; added = added multiple by 100
+	alert(denguePercentage); // added for pop up box
+	var resultText = document.getElementById("results");
+	resultText.innerHTML = "Percent it's likely malaria =" + malaria_count /4 *100 + "<br> Percent it's likely dengue fever =" + dengue_count /4 *100 ; // added () re did change divided by 6 multiplied by 100 added percent; changed it to percent likel; changed it to cold_count and allergy_count to signal it
+	
+	
+
+}
+</script>
+     </head> 
+
+
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Malaria or Dengue?</h1> <!--changed to Malaria or Dangue-->
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have malaria or gange fever? Answer a few short questions to find out.</p> <!--changed to target the malaria vs gange question -->
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--changed the button color to grey-->
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--changed header color to purple, then back to carrot-->
+		<h1>Question 1</h1>
+		
+	</div>
+	        <p>Has your fever been long lasting?</p> <!-- added question also changed the question to "has your fever been long lasting? -->  
+		<a href="#two" onclick="dengueAdd();" class="w3-btn w3-grey"> yes </a> <!-- added yes button for question 1, also added allergy add; changed to dengue -->
+		<a href="#two" onclick="malariaAdd();" class="w3-btn w3-grey"> no </a> <!-- added no button for question 1, also added cold add; changed to dengue -->
+	</div>
+	
+    	<div id="content" class="w3-container"> <!-- added because i think it was missing -->
+        <p></p>   <!-- deleted "question 1 here --> 
+    	</div>
+</div>
+
+<div class="page" id="two">
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- added id="header" also changed color to black; then back to carrot-->
+		<h1>Question 2</h1>
+		
+	</div>
+	        <p>Do you had short, recurrent spells of chills?</p> <!-- added question; changed question to "Do you had short, recurrent spells of chills?" -->  
+		<a href="#three" onclick="malariaAdd();"  class="w3-btn w3-grey"> yes </a> <!-- added yes button for question 2, also added cold que -->
+		<a href="#three" onclick="dengueAdd();" class="w3-btn w3-grey"> no </a> <!-- added no button for question 2, also added allergy que -->
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p></p> <!-- deleted "question 2 here --> 
+	</div>
+</div>
+	
+<div class="page" id="three">
+	<div id= "header" class="w3-container w3-flat-carrot"> <!-- delted portion that wasnt suppose to be there. also added id= "header"; also changed color to purple; then back to carrot-->
+		<h1>Question 3</h1>
+		
+	</div>
+	        <p>Do you have swelling of the joints?</p> <!-- added question; changed question to "do you have swelling of the joints?" --> 
+		<a href="#four" onclick="dengueAdd();"  class="w3-btn w3-grey"> yes </a> <!-- added yes button for question 3, also added cold que; fixed que to move to page 3 -->
+		<a href="#four" onclick="malariaAdd();" class="w3-btn w3-grey"> no </a> <!-- added no button for question 3, also added allergy que; fixed que to move to page 3 --> 
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p></p> <!-- deleted "question 3 here --> 
+	</div>
+</div>
+
+<div class="page" id="four"> 
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- delted portion that wasnt suppose to be there, also added id="header" -->
+		<h1>Question 4</h1>
+</div>
+	        <p>Do you feel side pain?</p> <!-- added question changed question to "do you feel side pain?"--> 
+		<a href="#five" onclick="malariaAdd();" class="w3-btn w3-grey"> yes </a> <!-- added yes button for question 4, also added allergy que;fixed que to move to page 4 changed color of buttons-->
+		<a href="#five" onclick="dengueAdd();" class="w3-btn w3-grey"> no </a> <!-- added no button for question 4, also added cold que; fixed que to move to page 4 changed color of buttons -->
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p></p> <!-- deleted "question 1 here -->     
+    	</div>
+</div>
+    
+    	</div>
+
+<div class="page" id="five"> <!-- added entire page for results changed the id to five-->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- changed header back to carrot-->
+		<h1>Results</h1>
+		
+	</div>
+	      
+		<a href="#six" onclick="resultPercentage();" class="w3-btn w3-grey"> results </a> <!-- added results button; also replaved the page two cue with a page 6 cue; deleted s; changed the code to six; changed button color to grey -->
+		
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p></p> <!-- delted "put question content here -->    
+    	</div>
+</div>
+
+<div class="page" id="six"> <!-- this produces the results page;changed ID to six-->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- codes for results page -->
+		<h1>Results</h1>
+	</div>
+	
+	<div id="content" class="w3-container"> 
+		<p id="results">Results Here</p> <!-- this is where the results are --> 
+		
+		
+	</div>
+</div>
+
+
+		
+ 
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+</body>
 </html>
