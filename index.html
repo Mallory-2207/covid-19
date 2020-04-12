@@ -15,7 +15,7 @@ Research Educator:
 Timothy Riedel
 triedel@utexas.edu
  
-Brief Description of Goal of Code: To diagnose whether or not the symptoms are for malaria or dengue fever // updated reasoning 
+Brief Description of Goal of Code: To diagnose whether or not the symptoms are for covid, cold, flu or allergies // updated reasoning 
  
 Known Issues: trouble getting the picture added // updated issues
 
@@ -32,18 +32,30 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var malaria_count = 0; //updated to say malaria
-        var dengue_count = 0; //updated to say gange
+        var covid_count = 0; //updated to say covid
+        var flu_count = 0; //updated to say flu
+	var cold_count = 0; //updated to say cold
+	var allergies_count = 0; //updated to say allergies
 
-//this was updated to code for malaria not allergies
-        function malariaAdd(){ 
-            malaria_count = malaria_count + 1;
-		//alert(malaria_count);
+//this was updated to code for covid
+        function covidAdd(){ 
+            covid_count = covid_count + 1;
+		//alert(covid_count);
 
-} //this was updated to code for gange count not cold
-	function dengueAdd(){ // this function adds 1 to gange value
-             dengue_count = dengue_count + 1;
-		//alert(dengue_count);
+} //this was updated to code for flu
+	function fluAdd(){ // this function adds 1 to flu value
+             flu_count = flu_count + 1;
+		//alert(flu_count);
+		
+}//this was updated to code for cold
+	function coldAdd(){ // this function adds 1 to cold value
+             cold_count = cold_count + 1;
+		//alert(cold_count);
+		
+ } //this was updated to code for allergies
+	function allergiesAdd(){ // this function adds 1 to allergies value
+             allergies_count = allergies_count + 1;
+		//alert(allergies_count);
 		
  } //was updated to code for percentage dengue and malaria, not cold and allergies
 function resultPercentage() {
@@ -100,7 +112,7 @@ img, object{
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have malaria or gange fever? Answer a few short questions to find out.</p> <!--changed to target the malaria vs gange question -->
+	<p>Are you feeling like you might be sick? Answer a few short questions to find out.</p> <!--changed to target the malaria vs gange question -->
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--changed the button color to grey-->
 	
@@ -115,9 +127,11 @@ img, object{
 		<h1>Question 1</h1>
 		
 	</div>
-	        <p>Has your fever been long lasting?</p> <!-- added question also changed the question to "has your fever been long lasting? -->  
-		<a href="#two" onclick="dengueAdd();" class="w3-btn w3-grey"> yes </a> <!-- added yes button for question 1, also added allergy add; changed to dengue -->
-		<a href="#two" onclick="malariaAdd();" class="w3-btn w3-grey"> no </a> <!-- added no button for question 1, also added cold add; changed to dengue -->
+	        <p>How long have you felt sick?</p> <!-- added question also changed the question to "has your fever been long lasting? -->  
+		<a href="#two" onclick="covidAdd();" class="w3-btn w3-grey"> 7-25 days </a> <!-- changed to covid -->
+		<a href="#two" onclick="fluAdd();" class="w3-btn w3-grey"> <14 days </a> <!-- changed to flu -->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-grey"> 7-14 days </a> <!-- changed to cold -->
+		<a href="#two" onclick="allergiesAdd();" class="w3-btn w3-grey"> several weeks </a> <!-- changed to allergies -->
 	</div>
 	
     	<div id="content" class="w3-container"> <!-- added because i think it was missing -->
