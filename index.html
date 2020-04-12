@@ -68,7 +68,7 @@ function resultPercentage() {
 	var allergiesPercentage = allergies_count /11 *100; // updated to say allergies and /11
 	alert(allergiesPercentage); // added for pop up box
 	var resultText = document.getElementById("results");
-	resultText.innerHTML = "Percent it's likely covid =" + covid_count /11 *100 + "<br> Percent it's likely a cold =" + cold_count /11 *100 + "<br> Percent it's likely the flu =" + flu_count /11 *100 + "<br> Percent it's likely allergies =" + allergies_count /11 *100 ; // added () re did change divided by 6 multiplied by 100 added percent; changed it to percent likel; changed it to cold_count and allergy_count to signal it
+	resultText.innerHTML = "Percent it's likely covid (out of 100)=" + covid_count /11 *100 + "<br> Percent it's likely a cold (out of 100)=" + cold_count /11 *100 + "<br> Percent it's likely the flu (out of 100)=" + flu_count /11 *100 + "<br> Percent it's likely allergies (out of 100)=" + allergies_count /11 *100 ; // added () re did change divided by 6 multiplied by 100 added percent; changed it to percent likel; changed it to cold_count and allergy_count to signal it
 	
 	
 
@@ -317,7 +317,9 @@ img, object{
 	</div>
 	
 	<div id="content" class="w3-container"> 
-		<p id="results">Results Here</p> <!-- this is where the results are --> 
+		<p id="results">Results Here</p> <!-- this is where the results are -->
+		
+	https://images.newscientist.com/wp-content/uploads/2020/02/11165812/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg
 		
 		
 	</div>
