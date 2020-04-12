@@ -59,13 +59,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
  } //was updated to code for percentage dengue and malaria, not cold and allergies
 function resultPercentage() {
-	var covidPercentage = covid_count /4 *100; // updated to say covid
+	var covidPercentage = covid_count /11 *100; // updated to say covid and /11
 	alert(covidPercentage); // added for pop up box
-	var coldPercentage = cold_count /4 *100; // updated to say cold
+	var coldPercentage = cold_count /11 *100; // updated to say cold and /11
 	alert(coldPercentage); // added for pop up box
-	var fluPercentage = flu_count /4 *100; // updated to say flu
+	var fluPercentage = flu_count /11 *100; // updated to say flu and /11
 	alert(fluPercentage); // added for pop up box
-	var allergiesPercentage = allergies_count /4 *100; // updated to say allergies
+	var allergiesPercentage = allergies_count /11 *100; // updated to say allergies and /11
 	alert(allergiesPercentage); // added for pop up box
 	var resultText = document.getElementById("results");
 	resultText.innerHTML = "Percent it's likely covid =" + covid_count /4 *100 + "<br> Percent it's likely a cold =" + cold_count /4 *100 + "<br> Percent it's likely the flu =" + flu_count /4 *100 + "<br> Percent it's likely the flu =" + flu_count /4 *100 ; // added () re did change divided by 6 multiplied by 100 added percent; changed it to percent likel; changed it to cold_count and allergy_count to signal it
@@ -177,9 +177,11 @@ img, object{
 	<div id="header" class="w3-container w3-flat-carrot"> <!-- delted portion that wasnt suppose to be there, also added id="header" -->
 		<h1>Question 4</h1>
 </div>
-	        <p>Do you feel side pain?</p> <!-- added question changed question to "do you feel side pain?"--> 
-		<a href="#five" onclick="malariaAdd();" class="w3-btn w3-grey"> yes </a> <!-- added yes button for question 4, also added allergy que;fixed que to move to page 4 changed color of buttons-->
-		<a href="#five" onclick="dengueAdd();" class="w3-btn w3-grey"> no </a> <!-- added no button for question 4, also added cold que; fixed que to move to page 4 changed color of buttons -->
+	        <p>Do you sneeze?</p> <!-- added question changed question to "do you sneeze?"--> 
+		<a href="#five" onclick="covidAdd();" class="w3-btn w3-grey"> no </a> <!-- changed to covid -->
+		<a href="#five" onclick="fluAdd();" class="w3-btn w3-grey"> it's common </a> <!-- changed to flu -->
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-grey"> no </a> <!-- changed to cold -->
+		<a href="#five" onclick="allergiesAdd();" class="w3-btn w3-grey"> it's common </a> <!-- changed to allergies --> 
 	</div>
 	
     	<div id="content" class="w3-container">
@@ -192,11 +194,11 @@ img, object{
 		<h1>Question 1</h1>
 		
 	</div>
-	        <p>How long have you felt sick?</p> <!-- added question also changed the question to "has your fever been long lasting? -->  
-		<a href="#six" onclick="covidAdd();" class="w3-btn w3-grey"> 7-25 days </a> <!-- changed to covid -->
-		<a href="#six" onclick="fluAdd();" class="w3-btn w3-grey"> <14 days </a> <!-- changed to flu -->
-		<a href="#six" onclick="coldAdd();" class="w3-btn w3-grey"> 7-14 days </a> <!-- changed to cold -->
-		<a href="#six" onclick="allergiesAdd();" class="w3-btn w3-grey"> several weeks </a> <!-- changed to allergies -->
+	        <p>Do you have a runny or stuffy nose?</p> <!-- added question also changed the question to "do you have a runny or stuffy nose? -->  
+		<a href="#six" onclick="covidAdd();" class="w3-btn w3-grey"> it's rare </a> <!-- changed to covid -->
+		<a href="#six" onclick="fluAdd();" class="w3-btn w3-grey"> it's common </a> <!-- changed to flu -->
+		<a href="#six" onclick="coldAdd();" class="w3-btn w3-grey"> sometimes </a> <!-- changed to cold -->
+		<a href="#six" onclick="allergiesAdd();" class="w3-btn w3-grey"> it's common </a> <!-- changed to allergies -->
 	</div>
 	
     	<div id="content" class="w3-container"> <!-- added because i think it was missing -->
@@ -208,11 +210,11 @@ img, object{
 		<h1>Question 1</h1>
 		
 	</div>
-	        <p>How long have you felt sick?</p> <!-- added question also changed the question to "has your fever been long lasting? -->  
-		<a href="#seven" onclick="covidAdd();" class="w3-btn w3-grey"> 7-25 days </a> <!-- changed to covid -->
-		<a href="#seven" onclick="fluAdd();" class="w3-btn w3-grey"> <14 days </a> <!-- changed to flu -->
-		<a href="#seven" onclick="coldAdd();" class="w3-btn w3-grey"> 7-14 days </a> <!-- changed to cold -->
-		<a href="#seven" onclick="allergiesAdd();" class="w3-btn w3-grey"> several weeks </a> <!-- changed to allergies -->
+	        <p>Do you have a sore throat?</p> <!-- added question also changed the question to "Do yu have a sore throat?" -->  
+		<a href="#seven" onclick="covidAdd();" class="w3-btn w3-grey"> sometimes </a> <!-- changed to covid -->
+		<a href="#seven" onclick="fluAdd();" class="w3-btn w3-grey"> it's common </a> <!-- changed to flu -->
+		<a href="#seven" onclick="coldAdd();" class="w3-btn w3-grey"> sometimes </a> <!-- changed to cold -->
+		<a href="#seven" onclick="allergiesAdd();" class="w3-btn w3-grey"> it's common </a> <!-- changed to allergies -->
 	</div>
 	
     	<div id="content" class="w3-container"> <!-- added because i think it was missing -->
@@ -225,11 +227,11 @@ img, object{
 		<h1>Question 1</h1>
 		
 	</div>
-	        <p>How long have you felt sick?</p> <!-- added question also changed the question to "has your fever been long lasting? -->  
-		<a href="#eight" onclick="covidAdd();" class="w3-btn w3-grey"> 7-25 days </a> <!-- changed to covid -->
-		<a href="#eight" onclick="fluAdd();" class="w3-btn w3-grey"> <14 days </a> <!-- changed to flu -->
-		<a href="#eight" onclick="coldAdd();" class="w3-btn w3-grey"> 7-14 days </a> <!-- changed to cold -->
-		<a href="#eight" onclick="allergiesAdd();" class="w3-btn w3-grey"> several weeks </a> <!-- changed to allergies -->
+	        <p>Do you have a fever?</p> <!-- added question also changed the question to "do you have a fever? -->  
+		<a href="#eight" onclick="covidAdd();" class="w3-btn w3-grey"> it's common </a> <!-- changed to covid -->
+		<a href="#eight" onclick="fluAdd();" class="w3-btn w3-grey"> it was short </a> <!-- changed to flu -->
+		<a href="#eight" onclick="coldAdd();" class="w3-btn w3-grey"> it's common </a> <!-- changed to cold -->
+		<a href="#eight" onclick="allergiesAdd();" class="w3-btn w3-grey"> no </a> <!-- changed to allergies -->
 	</div>
 	
     	<div id="content" class="w3-container"> <!-- added because i think it was missing -->
@@ -241,11 +243,11 @@ img, object{
 		<h1>Question 1</h1>
 		
 	</div>
-	        <p>How long have you felt sick?</p> <!-- added question also changed the question to "has your fever been long lasting? -->  
-		<a href="#nine" onclick="covidAdd();" class="w3-btn w3-grey"> 7-25 days </a> <!-- changed to covid -->
-		<a href="#nine" onclick="fluAdd();" class="w3-btn w3-grey"> <14 days </a> <!-- changed to flu -->
-		<a href="#nine" onclick="coldAdd();" class="w3-btn w3-grey"> 7-14 days </a> <!-- changed to cold -->
-		<a href="#nine" onclick="allergiesAdd();" class="w3-btn w3-grey"> several weeks </a> <!-- changed to allergies -->
+	        <p>Do you feel tired and weak?</p> <!-- added question also changed the question to "do you feel tired and weak? -->  
+		<a href="#nine" onclick="covidAdd();" class="w3-btn w3-grey"> sometimes </a> <!-- changed to covid -->
+		<a href="#nine" onclick="fluAdd();" class="w3-btn w3-grey"> sometimes </a> <!-- changed to flu -->
+		<a href="#nine" onclick="coldAdd();" class="w3-btn w3-grey"> it's common </a> <!-- changed to cold -->
+		<a href="#nine" onclick="allergiesAdd();" class="w3-btn w3-grey"> sometimes </a> <!-- changed to allergies -->
 	</div>
 	
     	<div id="content" class="w3-container"> <!-- added because i think it was missing -->
@@ -257,11 +259,11 @@ img, object{
 		<h1>Question 1</h1>
 		
 	</div>
-	        <p>How long have you felt sick?</p> <!-- added question also changed the question to "has your fever been long lasting? -->  
-		<a href="#ten" onclick="covidAdd();" class="w3-btn w3-grey"> 7-25 days </a> <!-- changed to covid -->
-		<a href="#ten" onclick="fluAdd();" class="w3-btn w3-grey"> <14 days </a> <!-- changed to flu -->
-		<a href="#ten" onclick="coldAdd();" class="w3-btn w3-grey"> 7-14 days </a> <!-- changed to cold -->
-		<a href="#ten" onclick="allergiesAdd();" class="w3-btn w3-grey"> several weeks </a> <!-- changed to allergies -->
+	        <p>Do you experience headaches?</p> <!-- added question also changed the question to "do you experience headaches? -->  
+		<a href="#ten" onclick="covidAdd();" class="w3-btn w3-grey"> sometimes </a> <!-- changed to covid -->
+		<a href="#ten" onclick="fluAdd();" class="w3-btn w3-grey"> it's rare </a> <!-- changed to flu -->
+		<a href="#ten" onclick="coldAdd();" class="w3-btn w3-grey"> sometimes </a> <!-- changed to cold -->
+		<a href="#ten" onclick="allergiesAdd();" class="w3-btn w3-grey"> sometimes (in relation to sinus pain) </a> <!-- changed to allergies -->
 	</div>
 	
     	<div id="content" class="w3-container"> <!-- added because i think it was missing -->
@@ -273,11 +275,11 @@ img, object{
 		<h1>Question 1</h1>
 		
 	</div>
-	        <p>How long have you felt sick?</p> <!-- added question also changed the question to "has your fever been long lasting? -->  
-		<a href="#eleven" onclick="covidAdd();" class="w3-btn w3-grey"> 7-25 days </a> <!-- changed to covid -->
-		<a href="#eleven" onclick="fluAdd();" class="w3-btn w3-grey"> <14 days </a> <!-- changed to flu -->
-		<a href="#eleven" onclick="coldAdd();" class="w3-btn w3-grey"> 7-14 days </a> <!-- changed to cold -->
-		<a href="#eleven" onclick="allergiesAdd();" class="w3-btn w3-grey"> several weeks </a> <!-- changed to allergies -->
+	        <p>Do you feel body aches and pains?</p> <!-- added question also changed the question to "do you feel body aches and pains? -->  
+		<a href="#eleven" onclick="covidAdd();" class="w3-btn w3-grey"> sometimes </a> <!-- changed to covid -->
+		<a href="#eleven" onclick="fluAdd();" class="w3-btn w3-grey"> it's common </a> <!-- changed to flu -->
+		<a href="#eleven" onclick="coldAdd();" class="w3-btn w3-grey"> it's common </a> <!-- changed to cold -->
+		<a href="#eleven" onclick="allergiesAdd();" class="w3-btn w3-grey"> no </a> <!-- changed to allergies -->
 	</div>
 	
     	<div id="content" class="w3-container"> <!-- added because i think it was missing -->
@@ -289,11 +291,11 @@ img, object{
 		<h1>Question 1</h1>
 		
 	</div>
-	        <p>How long have you felt sick?</p> <!-- added question also changed the question to "has your fever been long lasting? -->  
-		<a href="#twelve" onclick="covidAdd();" class="w3-btn w3-grey"> 7-25 days </a> <!-- changed to covid -->
-		<a href="#twelve" onclick="fluAdd();" class="w3-btn w3-grey"> <14 days </a> <!-- changed to flu -->
-		<a href="#twelve" onclick="coldAdd();" class="w3-btn w3-grey"> 7-14 days </a> <!-- changed to cold -->
-		<a href="#twelve" onclick="allergiesAdd();" class="w3-btn w3-grey"> several weeks </a> <!-- changed to allergies -->
+	        <p>Do you experience diarrhea?</p> <!-- added question also changed the question to "do you experience diarrhea? -->  
+		<a href="#twelve" onclick="covidAdd();" class="w3-btn w3-grey"> sometimes </a> <!-- changed to covid -->
+		<a href="#twelve" onclick="fluAdd();" class="w3-btn w3-grey"> no </a> <!-- changed to flu -->
+		<a href="#twelve" onclick="coldAdd();" class="w3-btn w3-grey"> sometimes </a> <!-- changed to cold -->
+		<a href="#twelve" onclick="allergiesAdd();" class="w3-btn w3-grey"> no </a> <!-- changed to allergies -->
 	</div>
 	
     	<div id="content" class="w3-container"> <!-- added because i think it was missing -->
